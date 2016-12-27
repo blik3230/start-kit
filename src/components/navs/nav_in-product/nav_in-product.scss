@@ -1,0 +1,112 @@
+.nav.nav_in-product {
+	padding-right: 16px; 
+
+	.nav__item {
+		position: relative;
+		height: 40px;
+		padding: 0 12px;
+
+		background-color: #e7e7e7;
+
+		line-height: 40px;
+
+		cursor: pointer;
+
+		& + .nav__item {
+			margin-top: 10px;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -40px;
+
+			display: none;
+
+			border: 20px solid transparent;
+			border-left-color: #653c24;
+		}
+	}
+
+	.nav__icon {
+		@include fa-icon;
+		display: inline-block;
+		width: 27px;
+		margin-top: -2px;
+
+		color: #9e6d50;
+		font-size: 14px;
+		line-height: 1;
+		vertical-align: middle;
+
+		&_general {
+
+			&:after {
+				content: '';
+			}
+		}
+
+		&_options {
+
+			&:after {
+				content: '';
+			}
+		}
+
+		&_features {
+
+			&:after {
+				content: '';
+			}
+		}
+
+		&_descriptions {
+
+			&:after {
+				content: '';
+			}
+		}
+
+		&_reviews {
+
+			&:after {
+				content: '';
+			}
+		}
+	}
+
+	.nav__text {
+		display: inline-block;
+		margin-top: -2px;
+
+		line-height: 1;
+		vertical-align: middle;
+	}
+
+	// modifiers and states
+	.nav__item:hover {
+		background-color: #653c24;
+		
+		.nav__icon {
+			color: #fff;
+		}
+
+		.nav__text {
+			color: #fff;
+		}
+	}
+
+	.nav__item_active {
+		@extend .nav__item:hover;
+
+		&:after {
+			display: block;
+		}
+
+		.nav__text {
+			font-weight: bold;
+		}
+	}
+}
+

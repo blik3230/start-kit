@@ -1,0 +1,73 @@
+.modal_product-credit {
+	width: 540px;
+	max-width: none;
+
+	.form {
+
+		.form__title {
+			margin: 17px 0 3px;
+			font: 14px $font-second;
+		}
+
+		.form__row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			padding: 0 57px 0 34px;
+
+			& + .form__row {
+				margin-top: 16px;
+			}
+		}
+
+		.form__label {
+			width: 206px;
+			margin-bottom: 0;
+
+			text-align: right;
+			line-height: 1;
+		}
+
+		.form__field {
+			width: 220px;
+		}
+
+		.form__select {
+			width: 100px;
+		}
+
+		.form__text {
+			color: #653c24;
+			line-height: 1;
+		}
+
+		.form__select + .form__text {
+			margin-left: 10px;
+		}
+
+		.select3230 {
+			height: 32px;
+
+			&__label {
+				width: calc( 100% - 34px);
+				height: 32px;
+				line-height: 32px;
+			}
+
+			&__btn {
+				width: 32px;
+				height: 32px;
+
+				&:after {
+					top: 9px;
+					left: 11px;
+				}
+			}
+
+			&__list {
+				top: 32px;
+			}
+		}
+	}
+}

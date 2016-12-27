@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Главная страница</title>
+		<style>
+			ol {
+				width: 50%;
+			}
+			
+			li + li {
+				margin-top: 4px;
+			}
+			
+			a {
+				color: black;
+			}
+			
+			.fin a {
+				color: green;
+			}
+			
+			.active {
+				color: red !important;
+			}
+			
+			.iframe {
+				position: fixed;
+				top: 0;
+				right: 0;
+				width: 50%;
+			}
+			
+			iframe {
+				width: 100%;
+				height: 900px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="iframe">
+			<iframe src="" frameborder="0" id="iframe"></iframe>
+		</div>
+		<ol class="list-pages">
+			<li class="list-pages__item"><a class="link" href="page-home.html">Главная</a></li>
+			<li class="list-pages__item"><a class="link" href="page-catalog(tile).html">Каталог товаров (плитка)</a></li>
+			<li class="list-pages__item"><a class="link" href="page-catalog(list).html">Каталог товаров (список)</a></li>
+			<li class="list-pages__item"><a class="link" href="page-product.html">Страница товара</a></li>
+			<li class="list-pages__item"><a class="link" href="page-reviews.html">Страница отзывов</a></li>
+			<li class="list-pages__item"><a class="link" href="page-search-result.html">Результаты поиска</a></li>
+			<li class="list-pages__item"><a class="link" href="page-basket.html">Корзина</a></li>
+		</ol>
+		<script>
+			var elFrame = document.getElementById('iframe'),
+				curLink = null;
+			
+			document.addEventListener('mouseenter focus', function () {
+				if(curLink) {
+					curLink.classList.remove('active');
+				}
+			
+				curLink = this;
+				curLink.classList.add('active');
+			
+				elFrame.src = curLink.href;
+			}, false);
+		</script>
+	</body>
+</html>

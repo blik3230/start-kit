@@ -1,0 +1,4 @@
+@function get_width_col($units: 1) {
+  $one_units: 100% / 12;
+  @return $one_units * $units;
+}

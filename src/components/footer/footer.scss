@@ -1,0 +1,88 @@
+.footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	width: 100%;
+	height: map_get($m-footer, height-lg);
+
+	.subscribe {
+		//the remaining styles are in the "components/subscribe"
+	}
+
+	.footer__row {
+		padding: 20px 92px; //for less .container
+
+		@extend %clfx;
+	}
+
+	.footer__col {
+		float: left;
+		width: 25%;
+		padding: 0 20px;
+
+		p {
+			margin-top: 8px;
+		}
+
+		a {
+			color: #000;
+
+			&:hover {
+				color: $color-link;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.footer__logo {
+		display: block;
+		margin-bottom: 4px;
+	}
+
+	.copyright {
+		margin-bottom: 8px;
+	}
+
+	.footer__nav {
+
+		li {
+
+			& + li {
+				margin-top: 3px;
+			}
+		}
+	}
+
+	.phones {
+		margin-bottom: 28px;
+
+		&__phone {
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.scroll-2-top {
+	position: fixed;
+	display: none;
+	//display: flex;
+	right: 4%;
+	bottom: 20px;
+	width: 44px;
+	height: 44px;
+	border: 2px solid #cccfd2;
+	border-radius: 7px;
+	font-size: 30px;
+	color: #cccfd2;
+	background: #fff;
+	z-index: 200;
+	transition: all 0.3s ease;
+}
+
+.scroll-2-top__arrow {
+	line-height: 20px;
+	margin: auto;
+}

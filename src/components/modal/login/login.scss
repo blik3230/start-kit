@@ -1,0 +1,219 @@
+// styles for elements are from #modal-login
+
+.login {
+	user-select: none;
+
+	&__switcher {
+		padding: 15px 0;
+
+		background-color: #f5ecdf;
+		text-align: center;
+	}
+
+	&__sw-btn {
+		display: inline-block;
+		vertical-align: middle;
+
+		cursor: pointer;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.toggle-switch {
+		position: relative;
+		display: inline-block;
+
+		margin: 0 43px 0 65px;
+
+		@include bg($toggle-switch);
+
+		vertical-align: middle;
+		cursor: pointer;
+
+		&__toggle {
+			position: absolute;
+			top: 2px;
+			left: 2px;
+
+			width: 48px;
+			height: 15px;
+
+			background-color: #d58e37;
+			border-radius: 6px;
+
+			transition: left .3s;
+		}
+	}
+
+	&__soc {
+		padding: 15px 0 20px;
+
+		text-align: center;
+
+		.list-soc {
+			display: inline-block;
+			margin-top: 20px;
+		}
+		.soc {
+			width: 36px;
+			height: 36px;
+
+			border-radius: 3px;
+			background-color: #c38d40;
+
+			line-height: 36px;
+
+			font-size: 20px;
+
+			& + .soc {
+				margin-left: 10px;
+			}
+
+			&:hover {
+				background-color: #653c24;
+			}
+		}
+
+	}
+
+	.switcher-container {
+		position: relative;
+		margin-top: 20px;
+
+		border-top: 3px solid #f6ebdf;
+
+		&:after {
+			content: 'или';
+			position: absolute;
+			top: -20px;
+			left: 50%;
+
+			padding-top: 4px;
+			margin-left: -48px;
+
+			@include bg($login-or);
+
+			text-align: center;
+		}
+
+		.form {
+			margin: 20px 0 0;
+
+			&__row {
+				@extend %clfx;
+				padding: 0 65px;
+
+				line-height: 20px;
+
+				& + .form__row {
+					margin-top: 10px;
+				}
+			}
+
+			&__col {
+				float: left;
+				width: 50%;
+
+				line-height: 36px;
+
+				& + .form__col {
+					text-align: right;
+				}
+			}
+
+			&__btn {
+				padding: 25px 65px;
+				margin-top: 25px;
+
+				background-color: #f5ecdf;
+
+				text-align: center;
+
+				.btn {
+					height: 42px;
+
+					font-size: 20px;
+					line-height: 42px;
+				}
+
+				.form__desc {
+					font-size: 12px;
+				}
+			}
+
+			&__desc {
+				margin-top: 10px;
+
+				p {
+
+					& + p {
+						margin-top: 10px;
+					}
+				}
+			}
+
+			&__label {
+				margin-bottom: 5px;
+			}
+
+			&__field {
+
+			}
+
+			.checkbox {
+				display: inline-block;
+			}
+
+			.login__link {
+				color: #c38d40;
+				border-bottom: 1px dashed #c38d40;
+				text-decoration: none;
+				vertical-align: middle;
+
+				&:hover {
+					border-bottom-color: transparent;
+				}
+			}
+
+			input[type=text],
+			input[type=password] {
+				height: 36px;
+
+				&:focus {
+					border-color: #c38d40;
+				}
+			}
+
+			&_login {
+				display: block;
+			}
+
+			&_registration {
+				display: none;
+			}
+		}
+	}
+
+
+	// state
+
+	&.js-on-registration {
+
+		.toggle-switch {
+
+			&__toggle {
+				left: 33px;
+			}
+		}
+
+		.form_login {
+			display: none;
+		}
+
+		.form_registration {
+			display: block;
+		}
+	}
+}

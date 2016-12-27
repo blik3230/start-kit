@@ -1,0 +1,91 @@
+//-
+	Created by ITUA on 24.11.2016.
+section#modal-product-credit.modal.modal_product-credit.mfp-hide.mfp-with-anim
+	.modal__close.js-modal-close(href='javascript:;')
+	h1.modal__title Купить в кредит
+
+	.modal__body
+		.form.form_in-modal
+			.form__row.h-tac
+				p.form__title.
+					Кредитный калькулятор
+
+			.form__row
+				.form__label
+					label Наименование товара:
+				.form__field
+					.form__text Кровать Форсаж Черепашки Ниндзя
+
+			.form__row
+				.form__label
+					label Стоимость товара:
+				.form__field
+					.form__text 1847 грн.
+
+			.form__row
+				.form__label
+					label Первоначальный взнос:
+				.form__field
+					.form__select.js-select3230
+						select
+							option(value=1) 10%
+							option(value=2) 20%
+							option(value=2) 20%
+							option(value=3) 30%
+
+			.form__row
+				.form__label
+					label Срок кредитования:
+				.form__field
+					.form__select.js-select3230
+						select
+							option(value=1) 1
+							option(value=2) 2
+							option(value=2) 2
+							option(value=3) 3
+
+			.form__row
+				.form__label
+					label Годовая процентная ставка:
+				.form__field
+					.form__select.js-select3230
+						select
+							option(value=1) 0.001%
+							option(value=2) 0.002%
+
+			.form__row
+				.form__label
+					label Одноразовая комиссия:
+				.form__field
+					.form__select.js-select3230
+						select
+							option(value=1) 1.5%
+							option(value=2) 2%
+
+			.form__row
+				.form__label
+					label Ежемесячная комиссия:
+				.form__field.h-df.h-df_aic
+					.form__select.js-select3230
+						select
+							option(value=1) 1.5%
+							option(value=2) 2%
+					.form__text в месяц
+
+			.form__row
+				.form__label
+					label Как к вам обращаться?*
+				.form__field
+					input(type='text', name='')
+
+			.form__row
+				.form__label
+					label Номер телефона*
+				.form__field
+					input(type='text', class="js-masked-phone", placeholder='+38(___) ___-____')
+
+			.form__btn
+				button.btn.btn_brown(type='submit') Оформить кредит
+
+
+

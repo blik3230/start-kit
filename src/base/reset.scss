@@ -1,0 +1,24 @@
+// reset padding and box-model for all blocks
+* {
+	margin: 0;
+	padding: 0;
+
+	&,
+	&:before,
+	&:after {
+		box-sizing: border-box;
+	}
+
+	:focus {
+		outline: none;
+	}
+}
+
+// reset ul for nav
+ul,li {
+	list-style: none;
+
+	a {
+		text-decoration: none;
+	}
+}

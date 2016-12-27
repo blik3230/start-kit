@@ -1,0 +1,10 @@
+.layout-main {
+	position: relative;
+	z-index: map_get($main-zi, 'main');
+
+	.header {}
+
+	.main {}
+
+	.footer {}
+}

@@ -1,0 +1,95 @@
+.basket-small.js-basket-small
+	.basket-small__toggle
+		.basket-small__icon
+			i.icon.icon-basket-small
+		.basket-small__info
+			p.basket-small__price
+				span 15 678
+				|   грн.
+			p.basket-small__quantity 4 товара
+			// <p>Корзина пуста</p>
+	.popup.popup_basket-small
+		.popup__head
+			p.popup__title Товары в корзине
+			.popup__close
+		.popup__body
+			table
+				tr.product
+					td
+						a.product__img(href='#')
+							img(src='../images/pictures/content/catalog/1basket.jpg')
+					td
+						a.product__name(href='#') Каркас кровати
+					td
+						span.product__quantity 1
+					td
+						.product__prices
+							.product__price-old 16 123 грн.
+							.product__price 15 234 грн.
+					td
+						span.product__btn-del
+				tr.product
+					td
+						a.product__img(href='#')
+							img(src='../images/pictures/content/catalog/1basket.jpg')
+					td
+						a.product__name(href='#') Каркас кровати
+					td
+						span.product__quantity 2
+					td
+						.product__prices
+							.product__price-old 16 123 грн.
+							.product__price 15 234 грн.
+					td
+						span.product__btn-del
+				tr.product
+					td
+						a.product__img(href='#')
+							img(src='../images/pictures/content/catalog/1basket.jpg')
+					td
+						a.product__name(href='#') Каркас кровати
+					td
+						span.product__quantity 1
+					td
+						.product__prices
+							.product__price-old 16 123 грн.
+							.product__price 15 234 грн.
+					td
+						span.product__btn-del
+				tr.product
+					td
+						a.product__img(href='#')
+							img(src='../images/pictures/content/catalog/1basket.jpg')
+					td
+						a.product__name(href='#') Каркас кровати
+					td
+						span.product__quantity 1
+					td
+						.product__prices
+							.product__price-old 16 123 грн.
+							.product__price 15 234 грн.
+					td
+						span.product__btn-del
+				tr.product
+					td
+						a.product__img(href='#')
+							img(src='../images/pictures/content/catalog/1basket.jpg')
+					td
+						a.product__name(href='#') Каркас кровати
+					td
+						span.product__quantity 1
+					td
+						.product__prices
+							.product__price-old 16 123 грн.
+							.product__price 15 234 грн.
+					td
+						span.product__btn-del
+		.basket-small__total
+			p
+				| В корзине
+				span 2
+				|  товара
+				span.colorful 15 949 грн.
+		.popup__footer
+			include ../btn/btn_basket-clear/btn_basket-clear
+			a.basket-small__order.btn.btn_brown.btn_padding(href='#') Оформить заказ
