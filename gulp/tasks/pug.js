@@ -4,13 +4,19 @@
 
 const pug = require('gulp-pug'),
 	through2 = require('through2').obj,
-	// pugInheritance = require('yellfy-pug-inheritance'),
-	// gulpif = require('gulp-if'),
-	// filter = require('gulp-filter'),
 	fs = require('fs'),
-	path = require('path');
+	path = require('path'),
+	watch = require('gulp-watch');
 
-var tree = {};
+var tree = {},
+	config = {
+		src: ['./src/pages/**/*.pug', './src/index.pug'],
+		dist: './dist/',
+		watch: {
+			pug:  ['./src/**/*.pug'],
+			html: ['./dist/*.html']
+		}
+	};
 
 function updateTree(filepath) {
 	
@@ -66,12 +72,12 @@ function getFileDependencies(filepath) {
 }
 	
 
-module.exports = function(gulp, paths, defaultTask) {
+module.exports = function(gulp, serv, defaultTask) {
 	defaultTask.push('pug:build');
 	
 	gulp.task('pug:build', function () {
 		
-		return gulp.src(paths.pug.src)
+		return gulp.src(config.src)
 			.pipe(through2(function (file, enc, callback) {
 				var filepath = file.base + file.relative;
 				var dependencies = tree[filepath];
@@ -101,6 +107,19 @@ module.exports = function(gulp, paths, defaultTask) {
 				console.error(e.message);
 				this.end();
 			}))
-			.pipe(gulp.dest(paths.pug.dist));
+			.pipe(gulp.dest(config.dist));
 	});
+	
+	// pug
+	watch(config.watch.pug, function(file) {
+		global.changedTempalteFile = file.path;
+		gulp.start('pug:build');
+	});
+	
+	// html
+	watch(config.watch.html)
+		.on('change', function (event) {
+			console.log(`change html ${event.path}`);
+			serv.reload();
+		});
 };

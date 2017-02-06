@@ -12,7 +12,7 @@ const webpackStream = require('webpack-stream'),
 
 
 
-module.exports = function(gulp, paths, serv, defaultTask) {
+module.exports = function(gulp, serv, defaultTask) {
 	defaultTask.push('webpack');
 	
 	console.log('in webpack' + global.isProd);
