@@ -6,7 +6,7 @@
 		<title>Главная страница</title>
 		<style>
 			ol {
-				width: 50%;
+				width: 200px;
 			}
 			
 			li + li {
@@ -29,7 +29,7 @@
 				position: fixed;
 				top: 0;
 				right: 0;
-				width: 50%;
+				width: calc(100vw - 220px);
 			}
 			
 			iframe {
@@ -43,20 +43,28 @@
 			<iframe src="" frameborder="0" id="iframe"></iframe>
 		</div>
 		<ol class="list-pages">
-			<li class="list-pages__item"><a class="link" href="page-home.html">Главная</a></li>
-			<li class="list-pages__item"><a class="link" href="page-catalog(tile).html">Каталог товаров (плитка)</a></li>
-			<li class="list-pages__item"><a class="link" href="page-catalog(list).html">Каталог товаров (список)</a></li>
-			<li class="list-pages__item"><a class="link" href="page-product.html">Страница товара</a></li>
-			<li class="list-pages__item"><a class="link" href="page-reviews.html">Страница отзывов</a></li>
-			<li class="list-pages__item"><a class="link" href="page-search-result.html">Результаты поиска</a></li>
-			<li class="list-pages__item"><a class="link" href="page-basket.html">Корзина</a></li>
+			<li class="list-pages__item"><a class="link" href="page-home.html" target="_blanck">Главная</a></li>
+			<li class="list-pages__item"><a class="link" href="page-home.html" target="_blanck">Контакты</a></li>
 		</ol>
+		<div class="iframe">
+			<iframe id="iframe"></iframe>
+		</div>
 		<script>
 			var elFrame = document.getElementById('iframe'),
-				curLink = null;
+				curLink = null,
+				links = document.getElementsByTagName('a');
 			
-			document.addEventListener('mouseenter focus', function () {
-				if(curLink) {
+			for(var i = 0; i < links.length; i += 1) {
+				links[i].addEventListener('focus', handle, false);
+				links[i].addEventListener('mouseenter', handle , false);
+			
+				if (!i) {
+					links[i].focus();
+				}
+			}
+			
+			function handle() {
+				if (curLink) {
 					curLink.classList.remove('active');
 				}
 			
@@ -64,7 +72,7 @@
 				curLink.classList.add('active');
 			
 				elFrame.src = curLink.href;
-			}, false);
+			}
 		</script>
 	</body>
 </html>

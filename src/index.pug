@@ -7,18 +7,22 @@ block title
 	title Главная страница
 
 block content
+	-
+		var pages = [
+		{
+			title: 'Главная',
+			href: 'page-home.html'
+		},
+		{
+			title: 'Контакты',
+			href: 'page-home.html'
+		}
+		];
+
 	ol.list-pages
-		li.list-pages__item
-			a.link(href="page-home.html") Главная
-		li.list-pages__item
-			a.link(href="page-catalog(tile).html") Каталог товаров (плитка)
-		li.list-pages__item
-			a.link(href="page-catalog(list).html") Каталог товаров (список)
-		li.list-pages__item
-			a.link(href="page-product.html") Страница товара
-		li.list-pages__item
-			a.link(href="page-reviews.html") Страница отзывов
-		li.list-pages__item
-			a.link(href="page-search-result.html") Результаты поиска
-		li.list-pages__item
-			a.link(href="page-basket.html") Корзина
+		each page in pages
+			li.list-pages__item
+				a.link(href=page.href, target='_blanck')= page.title
+
+	.iframe
+		iframe#iframe

@@ -9,7 +9,7 @@ html(lang='ru')
 			title Project Name
 		style.
 			ol {
-				width: 50%;
+				width: 200px;
 			}
 
 			li + li {
@@ -32,7 +32,7 @@ html(lang='ru')
 				position: fixed;
 				top: 0;
 				right: 0;
-				width: 50%;
+				width: calc(100vw - 220px);
 			}
 
 			iframe {
@@ -54,10 +54,20 @@ html(lang='ru')
 
 		script.
 			var elFrame = document.getElementById('iframe'),
-				curLink = null;
+				curLink = null,
+				links = document.getElementsByTagName('a');
 
-			document.addEventListener('mouseenter focus', function () {
-				if(curLink) {
+			for(var i = 0; i < links.length; i += 1) {
+				links[i].addEventListener('focus', handle, false);
+				links[i].addEventListener('mouseenter', handle , false);
+
+				if (!i) {
+					links[i].focus();
+				}
+			}
+
+			function handle() {
+				if (curLink) {
 					curLink.classList.remove('active');
 				}
 
@@ -65,6 +75,8 @@ html(lang='ru')
 				curLink.classList.add('active');
 
 				elFrame.src = curLink.href;
-			}, false);
+			}
+
+
 
 
