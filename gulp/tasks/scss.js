@@ -10,7 +10,8 @@ const sass = require('gulp-sass'),
 	config = {
 		src: ['./src/main.scss'],
 		dist: './dist/css/',
-		watch: ['./src/**/*.scss', '!./src/vendors/', './src/vendors/_tools.scss']
+		fileName: 'style.css',
+		watch: ['./src/**/*.scss', '!./src/vendors/', '!./src/helpers/', './src/vendors/_tools.scss']
 	};
 
 module.exports = function (gulp, serv, defaultTask) {
@@ -42,7 +43,7 @@ module.exports = function (gulp, serv, defaultTask) {
 			}).on('error', sass.logError))
 			.pipe(autoprefixer())
 			.pipe(sourcemaps.write())
-			.pipe(rename('style.css'))
+			.pipe(rename(config.fileName))
 			.pipe(gulp.dest(config.dist))
 			.pipe(serv.stream({match: '**/*.css'}));
 	});

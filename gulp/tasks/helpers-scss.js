@@ -7,16 +7,16 @@ const sass = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	watch = require('gulp-watch'),
 	config = {
-		src: ['./src/vendors/main-vendors.scss'],
+		src: ['./src/helpers/main-helpers.scss'],
 		dist: './dist/css/',
-		fileName: 'vendors.css',
-		watch: ['./src/vendors/**/*.scss']
+		fileName: 'helpers.css',
+		watch: ['./src/helpers/**/*.scss']
 	};
 
 module.exports = function (gulp, serv, defaultTask) {
-	defaultTask.push('vendors:scss');
+	defaultTask.push('helpers:scss');
 	
-	gulp.task('vendors:scss', function() {
+	gulp.task('helpers:scss', function() {
 		
 		return gulp.src(config.src)
 			.pipe(sourcemaps.init())
@@ -28,14 +28,12 @@ module.exports = function (gulp, serv, defaultTask) {
 			.pipe(serv.stream({match: '**/*.css'}));
 	});
 	
-	//todo: cat
-	
 	
 	if(!global.isProd) {
 		
 		// scss
 		watch(config.watch, function (file) {
-			gulp.start('vendors:scss');
+			gulp.start('helpers:scss');
 		});
 	}
 };

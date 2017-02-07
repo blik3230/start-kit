@@ -5,6 +5,7 @@ const gulp = require('gulp'),
 	initServer = require('./gulp/tasks/server'),
 	initScss = require('./gulp/tasks/scss'),
 	initVendorsScss = require('./gulp/tasks/vendors-scss'),
+	initHelpersScss = require('./gulp/tasks/helpers-scss'),
 	initWebpack = require('./gulp/tasks/webpack'),
 	initFont = require('./gulp/tasks/font'),
 	initImgmin = require('./gulp/tasks/imgmin'),
@@ -21,6 +22,8 @@ const serv = initServer(gulp, defaultTask);
 initPug(gulp, serv, defaultTask);
 
 initVendorsScss(gulp, serv, defaultTask);
+
+initHelpersScss(gulp, serv, defaultTask);
 
 initScss(gulp, serv, defaultTask);
 
