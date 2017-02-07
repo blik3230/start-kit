@@ -1,0 +1,217 @@
+.basket-small {
+    position: relative;
+
+    &__toggle {
+        height: 60px;
+
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        box-shadow: 3px 3px 0px 0px rgba(148,148,148,0.16);
+
+        line-height: 61px;
+
+		cursor: pointer;
+    }
+
+        &__icon {
+            position: relative;
+            display: inline-block;
+            width: 66px;
+            height: 100%;
+
+            border-right: 1px solid #e0e0e0;
+            vertical-align: top;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                margin: -15px 0 0 -16px;
+
+                @include bg($small-basket);
+            }
+
+        }
+
+        &__info {
+            display: inline-block;
+            padding: 5px 0 0 22px;
+
+            font-size: 16px;
+            line-height: 1.2;
+            vertical-align: middle;
+        }
+
+            &__price {
+				line-height: 1px;
+				margin-bottom: 6px;
+
+                span {
+                    font-family: $g-font-second;
+                }
+            }
+
+            &__quantity {
+                display: inline-block;
+                border-bottom: 1px dashed #000
+            }
+
+    .popup_basket-small {
+		position: absolute;
+		top: 100%;
+		right: 0;
+
+		display: none;
+		width: 664px;
+
+		background-color: #fff;
+		border-top: 6px solid #653c24;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.29);
+		
+		&:before {
+			content: '';
+			position: absolute;
+			right: 98px;
+			top: -22px;
+
+			border: 8px solid transparent;
+			border-bottom-color: #653c24;
+		}
+
+		&.show {
+			display: block;
+		}
+
+		.popup__head {
+			position: relative;
+
+			padding: 15px;
+
+			border-bottom: 1px dashed #e7e7e7;
+		}
+
+			.popup__title {}
+
+			.popup__close {
+				position: absolute;
+				top: 50%;
+				right: 15px;
+				margin-top: -8px;
+
+				@include bg($popup-close);
+
+				cursor: pointer;
+			}
+
+		.popup__body {
+			max-height: 264px;
+			overflow: auto;
+
+			table {
+				width: 100%;
+
+				td {
+					padding: 15px;
+					//text-align: center;
+				}
+			}
+		}
+
+		.popup__footer {
+			@extend %clfx;
+			padding: 15px;
+		}
+    }
+
+        .product {
+
+            &__img {
+				display: inline-block;
+				width: 69px;
+			}
+
+            &__name {
+				color: #653c24;
+				font: 13px $g-font-second;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+            &__quantity {
+				font-family: $g-font-second;
+				color: #545454;
+			}
+
+            &__prices {
+				font-size: 13px;
+			}
+
+                &__price {
+
+				}
+
+                &__price-old {
+					font-family: $g-font-main;
+				}
+
+			&__btn-del {
+				display: inline-block;
+				@include bg($btn-del);
+
+				background-color: #d8d8d8;
+
+				cursor: pointer;
+				vertical-align: middle;
+
+				&:hover {
+					background-color: #a41115;
+				}
+			}
+        }
+
+    &__total {
+		padding: 15px;
+
+		background-color: #f4f4f4;
+
+		font: 14px $g-font-second;
+		text-align: center;
+		text-transform: uppercase;
+
+			p {
+				line-height: 26px;
+			}
+
+				span:not(.colorful) {
+					margin: 0 8px 0 5px;
+				}
+
+				.colorful {
+					margin-left: 10px;
+
+					color: #a41115;
+					font-size: 26px;
+					text-transform: none;
+					vertical-align: bottom;
+				}
+    }
+		.btn_basket-clear {
+			float: left;
+		}
+
+		&__order {
+			float: right;
+			height: 43px;
+
+			font-size: 11px;
+			line-height: 43px;
+			letter-spacing: 0.4px;
+			text-transform: uppercase;
+		}
+}
+

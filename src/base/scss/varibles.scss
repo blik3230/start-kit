@@ -1,0 +1,100 @@
+//font path
+$font-path: "../fonts" !default;
+
+// font weights
+$g-fw-thin: 100;
+$g-fw-exlight: 200;
+$g-fw-light: 300;
+$g-fw-normal: 400;
+$g-fw-medium: 500;
+$g-fw-semibold: 600;
+$g-fw-bold: 700;
+$g-fw-exbold: 800;
+// todo: реализовать с помощью карт и фунции
+
+
+// values of fonts
+// is in ./fonts.scss
+$g-font-main: "Gothampro", Helvetica, Arial, sans-serif;
+$g-font-second: 'Gothampro Bold', Helvetica, Arial, sans-serif;
+
+
+//
+//----- colors -----
+//
+$g-colors: (
+	text: #000,
+	link: #666,
+	red: #f00,
+	blue: #00f,
+	green: #0f0
+);
+
+
+//
+//----- main layout values -----
+//
+	// values of the zindex
+	$g-zindex: (
+		l-main: 0,
+		header: 2,
+		nav: 3,
+		main: 1,
+		footer: 2,
+	);
+
+	// values of the header
+	$g-header: (
+		height-lg: 80px,
+		height-md: 80px,
+		height-sm: 60px,
+		height-xs: 60px,
+		zi: #{map_get($g-zindex, header)}
+	);
+
+	// values of the footer
+	$g-footer: (
+		height-lg: 513px,
+		height-md: 56px,
+		height-sm: 129px,
+		height-xs: 207px,
+		zi: #{map_get($g-zindex, footer)}
+	);
+
+	// values of the content area
+	$g-main: (
+		height-lg: calc( 100vh - #{map_get($g-header, height-lg) + map_get($g-footer, height-lg)} ),
+		height-md: calc( 100vh - #{map_get($g-footer, height-md)} ),
+		height-sm: calc( 100vh - #{map_get($g-footer, height-sm)} ),
+		height-xs: calc( 100vh - #{map_get($g-footer, height-xs)} ),
+		zi: #{map_get($g-zindex, main)}
+	);
+
+	// values of the container
+	$g-container: (
+		width-lg: 1200px,
+		width-md: 960px,
+		width-sm: 720px,
+		width-xs: 100%,
+	);
+
+
+//
+//----- shadows -----
+//
+$g-text-shadow: 0 -2px 1px rgba(0, 0, 0, 0.25);
+
+
+// screen resolutions
+// variables are in ./utils/mixins/media.scss
+// xl - 1361+
+// lg - 1281 -1360
+// md - 1025 - 1280
+// sm - 769 - 1024
+// xs - 320 - 768
+//$g-container: (
+//	width-lg: 1200px,
+//	width-md: 960px,
+//	width-sm: 720,
+//	width-xs: 100%,
+//);

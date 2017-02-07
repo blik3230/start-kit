@@ -1,0 +1,34 @@
+//-
+	Created by ITUA on 24.11.2016.
+section#modal-product-calc.modal.modal_product-calc.mfp-hide.mfp-with-anim
+	.modal__close.js-modal-close(href='javascript:;')
+	h1.modal__title Просчет на нестандарт
+	.modal__body
+		.form.form_in-modal
+			.form__row.h-tac
+				p.form__desc.
+					Оставьте заявку, и мы свяжемся с вами в ближайшее время.
+
+			.form__row
+				.form__label
+					label Как к вам обращаться?*
+				.form__field
+					input(type='text', name='')
+
+			.form__row
+				.form__label
+					label Номер телефона*
+				.form__field
+					input(type='text', class="js-masked-phone", placeholder='+38(___) ___-____')
+
+			.form__row
+				.form__label
+					label Электронная почта*
+				.form__field
+					input(type='text', name='')
+
+			.form__btn
+				button.btn.btn_brown(type='submit') Отправить
+
+
+

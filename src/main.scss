@@ -1,5 +1,5 @@
 // base style (variables of the project, reset, normalize, fonts, typography)
-@import "base/index";
+@import "base/scss/index";
 
 // utils (mixins, function, templates, helpers - individual library)
 @import "utils/scss/index";
@@ -11,7 +11,7 @@
 @import "layouts/index";
 
 // components (styles for components)
-@import "components/index";
+@import "components/main/_index";
 
 // pages (styles for modifiers of pages)
 @import "pages/index";

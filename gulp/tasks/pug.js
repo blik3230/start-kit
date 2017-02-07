@@ -6,7 +6,8 @@ const pug = require('gulp-pug'),
 	through2 = require('through2').obj,
 	fs = require('fs'),
 	path = require('path'),
-	watch = require('gulp-watch');
+	watch = require('gulp-watch'),
+	flatten = require('gulp-flatten');
 
 var tree = {},
 	config = {
@@ -107,6 +108,7 @@ module.exports = function(gulp, serv, defaultTask) {
 				console.error(e.message);
 				this.end();
 			}))
+			.pipe(flatten({ includeParents: 0 }))
 			.pipe(gulp.dest(config.dist));
 	});
 	

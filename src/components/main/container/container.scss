@@ -1,0 +1,12 @@
+$width-lg: 1440px;
+$padding-lg: 10px;
+
+.container {
+	width: $width-lg;
+	padding: 0 $padding-lg;
+	margin: 0 auto;
+
+	&.container_fullsize {
+		padding: 0;
+	}
+}

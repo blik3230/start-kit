@@ -1,0 +1,47 @@
+section#modal-add-review.modal.modal_add-review.mfp-hide.mfp-with-anim
+	.modal__close.js-modal-close(href='javascript:;')
+	h1.modal__title Добавить отзыв о товаре
+	.modal__body
+		.form.form_in-modal
+			.form__row.form__row_bg
+				.form__label
+					label Ваше ФИО
+				.form__field
+					input(type='text', name='')
+
+			.form__row.form__row_bg
+				.form__label
+					label
+						i.icon.icon_review-positive
+						| Достоинства
+				.form__field
+					textarea(placeholder='Введите текст')
+
+			.form__row.form__row_bg
+				.form__label
+					label
+						i.icon.icon_review-negative
+						| Достоинства
+				.form__field
+					textarea(placeholder='Введите текст')
+
+			.form__row.form__row_bg
+				.form__label
+					label
+					i.icon.icon_review-comment
+					| Комментарии
+				.form__field
+					textarea(placeholder='Введите текст')
+
+			.form__row.form__row_rating
+				.form__label
+					label Оцените товар
+				.form__field
+					include ../../rating/rating_links
+					input(type='hidden', class='js-field-rating')
+
+			.form__btn
+				button.btn.btn_brown(type='submit') Добавить отзыв
+
+
+

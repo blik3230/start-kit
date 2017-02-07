@@ -1,0 +1,27 @@
+form.form_search {
+	position: relative;
+	font-size: 12px;
+
+	input[type=text] {
+
+		border: 1px solid #c38d40;
+
+	}
+
+	.form__submit {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		width: 46px;
+		height: 34px;
+
+		background-color: #c38d40;
+		border: none;
+
+		.fa {
+			color: #fff;
+			font-size: 18px;
+		}
+	}
+}

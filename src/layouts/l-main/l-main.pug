@@ -11,15 +11,15 @@ html(lang='ru')
       link(rel='stylesheet', href='css/vendors.css')
    body
       .wrap-main
-         include ../../components/header/header
+         include ../../components/main/header/header
 
          block content
             p Default content s
 
-         include ../../components/footer/footer
+         include ../../components/main/footer/footer
 
       //-common modals
-      include ../../components/modal/login/modal_login
+      include ../../components/main/modal/login/modal_login
 
       //- modals for individual pages
       block modals

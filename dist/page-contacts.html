@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Главная страница</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/vendors.css">
+	</head>
+	<body>
+		<div class="wrap-main">
+			<header class="header">
+				<div class="container">
+					<div class="header__lt-1">
+						<div class="nav nav_main">
+							<ul class="nav__menu">
+								<li class="nav__has-submenu"><a href="#">Услуги</a>
+									<ul class="nav__submenu">
+										<li><a href="#">Доставка</a></li>
+										<li><a href="#">Подъем и сборка</a></li>
+										<li><a href="#">Оплата</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Гарантия</a></li>
+								<li class="nav__has-submenu"><a href="#">Кредит</a>
+									<ul class="nav__submenu">
+										<li><a href="#">УкрСиббанк</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Отзывы</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div><a class="header__logo" href="/"><img src="../images/pictures/general/logo.png" alt="Logo barin.kiev.ua"></a>
+					</div>
+					<div class="header__lt-2">
+						<div class="header__phones">
+							<div class="phones">
+								<p class="phones__title">Отдел продаж:</p>
+								<p class="phones__phone"><i class="phones__icon phones__icon_kievstar"></i>067 586-55-77</p>
+								<p class="phones__phone"><i class="phones__icon phones__icon_mts"></i>095 585-66-77</p>
+							</div>
+							<div class="phones">
+								<div class="phones__dropdown js-phones">
+									<p class="phones__toggle">Заказать обратный звонок</p>
+									<div class="phones__popup">
+										<form class="form form_callback">
+											<div class="form__row">
+												<label>Ваше имя*</label>
+												<div class="form__field">
+													<input type="text" required="true">
+												</div>
+											</div>
+											<div class="form__row">
+												<label>Номер телефона*</label>
+												<div class="form__field">
+													<input class="js-masked-phone" type="text" placeholder="+38 (___) ___-____" required="true">
+												</div>
+											</div>
+											<div class="form__btn">
+												<button class="btn btn_green">Обратный звонок</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<p class="phones__phone"><i class="phones__icon phones__icon_live"></i>093 219-33-77</p>
+								<p class="phones__phone"><i class="phones__icon phones__icon_city"></i>044 337-49-77</p>
+							</div>
+							<div class="phones">
+								<p class="phones__title">Доставка и сервис:</p>
+								<p class="phones__phone"><i class="phones__icon phones__icon_kievstar"></i>067 342-98-48</p>
+								<p class="phones__phone"><i class="phones__icon phones__icon_city"></i>044 337-48-77</p>
+							</div>
+						</div>
+						<div class="header__search js-header__search">
+							<div class="live-search-results js-live-search-results">
+								<div class="live-search-results__body">
+									<div class="live-search-results__elem"><a class="live-search-results-link" href="#"><b>Res</b>ult</a></div>
+									<div class="live-search-results__elem"><a class="live-search-results-link" href="#">Result</a></div>
+									<div class="live-search-results__elem"><a class="live-search-results-link" href="#">Res<b>ult</b></a></div>
+								</div>
+								<div class="live-search-results__footer">
+									<div class="live-search-results__elem"><a class="live-search-results-link" href="#">Все результаты.</a></div>
+								</div>
+							</div>
+							<form class="form form_search">
+								<input class="js-live-search-input" type="text" placeholder="Введите название или артикул товара">
+								<button class="form__submit" type="submit"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+					</div>
+					<div class="header__lt-3">
+						<div class="header__actions"><a href="#"><i class="fa fa-heart"></i>Избранное (12)</a><a href="#"><i class="fa fa-exchange"></i>Сравнение (3)</a></div>
+					</div>
+					<div class="header__lt-4">
+						<div class="header__user-panel">
+							<div class="user"><i class="user__icon"></i><a class="js-btn-modal-login" href="#modal-login">Войти/Регистрация</a>
+								<!-- !!!!!for authorization  users!!!!!!-->
+								<!-- <a href="#" class="user__name">???? ??????</a>-->
+								<!-- <span>/</span>-->
+								<!-- <a href="#">?????</a>-->
+							</div>
+							<div class="list-soc"><a class="soc soc_fb" href="#"><i class="fa fa-facebook"></i></a><a class="soc soc_vk" href="#"><i class="fa fa-vk"></i></a></div>
+						</div>
+						<div class="basket-small js-basket-small">
+							<div class="basket-small__toggle">
+								<div class="basket-small__icon"><i class="icon icon-basket-small"></i></div>
+								<div class="basket-small__info">
+									<p class="basket-small__price"><span>15 678</span>  грн.</p>
+									<p class="basket-small__quantity">4 товара</p>
+									<!-- <p>Корзина пуста</p>-->
+								</div>
+							</div>
+							<div class="popup popup_basket-small">
+								<div class="popup__head">
+									<p class="popup__title">Товары в корзине</p>
+									<div class="popup__close"></div>
+								</div>
+								<div class="popup__body">
+									<table>
+										<tr class="product">
+											<td><a class="product__img" href="#"><img src="../images/pictures/content/catalog/1basket.jpg"></a></td>
+											<td><a class="product__name" href="#">Каркас кровати</a></td>
+											<td><span class="product__quantity">1</span></td>
+											<td>
+												<div class="product__prices">
+													<div class="product__price-old">16 123 грн.</div>
+													<div class="product__price">15 234 грн.</div>
+												</div>
+											</td>
+											<td><span class="product__btn-del"></span></td>
+										</tr>
+										<tr class="product">
+											<td><a class="product__img" href="#"><img src="../images/pictures/content/catalog/1basket.jpg"></a></td>
+											<td><a class="product__name" href="#">Каркас кровати</a></td>
+											<td><span class="product__quantity">2</span></td>
+											<td>
+												<div class="product__prices">
+													<div class="product__price-old">16 123 грн.</div>
+													<div class="product__price">15 234 грн.</div>
+												</div>
+											</td>
+											<td><span class="product__btn-del"></span></td>
+										</tr>
+										<tr class="product">
+											<td><a class="product__img" href="#"><img src="../images/pictures/content/catalog/1basket.jpg"></a></td>
+											<td><a class="product__name" href="#">Каркас кровати</a></td>
+											<td><span class="product__quantity">1</span></td>
+											<td>
+												<div class="product__prices">
+													<div class="product__price-old">16 123 грн.</div>
+													<div class="product__price">15 234 грн.</div>
+												</div>
+											</td>
+											<td><span class="product__btn-del"></span></td>
+										</tr>
+										<tr class="product">
+											<td><a class="product__img" href="#"><img src="../images/pictures/content/catalog/1basket.jpg"></a></td>
+											<td><a class="product__name" href="#">Каркас кровати</a></td>
+											<td><span class="product__quantity">1</span></td>
+											<td>
+												<div class="product__prices">
+													<div class="product__price-old">16 123 грн.</div>
+													<div class="product__price">15 234 грн.</div>
+												</div>
+											</td>
+											<td><span class="product__btn-del"></span></td>
+										</tr>
+										<tr class="product">
+											<td><a class="product__img" href="#"><img src="../images/pictures/content/catalog/1basket.jpg"></a></td>
+											<td><a class="product__name" href="#">Каркас кровати</a></td>
+											<td><span class="product__quantity">1</span></td>
+											<td>
+												<div class="product__prices">
+													<div class="product__price-old">16 123 грн.</div>
+													<div class="product__price">15 234 грн.</div>
+												</div>
+											</td>
+											<td><span class="product__btn-del"></span></td>
+										</tr>
+									</table>
+								</div>
+								<div class="basket-small__total">
+									<p>В корзине<span>2</span> товара<span class="colorful">15 949 грн.</span></p>
+								</div>
+								<div class="popup__footer"><a class="btn btn_basket-clear" href="#">Очистить корзину</a><a class="basket-small__order btn btn_brown btn_padding" href="#">Оформить заказ</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /container-->
+			</header>
+			<nav class="nav nav_catalog">
+				<div class="container">
+					<ul class="nav__menu">
+						<li class="nav__has-submenu"><a href="#">Матрасы, Текстиль</a>
+							<ul class="nav__submenu">
+								<li><a href="#">Матрасы</a></li>
+								<li><a href="#">Подушки</a></li>
+								<li><a href="#">Одеяла</a></li>
+								<li><a href="#">Наматрасники</a></li>
+							</ul>
+						</li>
+						<li class="nav__has-submenu"><a href="#">Спальни, Кровати</a>
+							<ul class="nav__submenu">
+								<li><a href="#">Матрасы</a></li>
+								<li><a href="#">Подушки</a></li>
+								<li><a href="#">Одеяла</a></li>
+								<li><a href="#">Наматрасники</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Мягкая мебель</a></li>
+						<li class="nav__has-submenu"><a href="#">Корпусная мебель</a>
+							<ul class="nav__submenu">
+								<li><a href="#">Матрасы</a></li>
+								<li><a href="#">Подушки</a></li>
+								<li><a href="#">Одеяла</a></li>
+								<li><a href="#">Наматрасники</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Ткани</a></li>
+						<li class="nav__has-submenu"><a href="#">Акции</a>
+							<ul class="nav__submenu">
+								<li class="nav__has-submenu nav__has-submenu_third"><a href="#">Матрасы, Текстиль</a>
+									<ul class="nav__submenu nav__submenu_third">
+										<li><a href="#">Матрасы</a></li>
+										<li><a href="#">Подушки</a></li>
+										<li><a href="#">Одеяла</a></li>
+										<li><a href="#">Наматрасники</a></li>
+									</ul>
+								</li>
+								<li class="nav__has-submenu nav__has-submenu_third"><a href="#">Спальни, Кровати</a>
+									<ul class="nav__submenu nav__submenu_third">
+										<li><a href="#">Матрасы</a></li>
+										<li><a href="#">Подушки</a></li>
+										<li><a href="#">Одеяла</a></li>
+										<li><a href="#">Наматрасники</a></li>
+									</ul>
+								</li>
+								<li class="nav__has-submenu nav__has-submenu_third"><a href="#">Мягкая мебель</a>
+									<ul class="nav__submenu nav__submenu_third">
+										<li><a href="#">Матрасы</a></li>
+										<li><a href="#">Подушки</a></li>
+										<li><a href="#">Одеяла</a></li>
+										<li><a href="#">Наматрасники</a></li>
+									</ul>
+								</li>
+								<li class="nav__has-submenu nav__has-submenu_third"><a href="#">Корпусная мебель</a>
+									<ul class="nav__submenu nav__submenu_third">
+										<li><a href="#">Матрасы</a></li>
+										<li><a href="#">Подушки</a></li>
+										<li><a href="#">Одеяла</a></li>
+										<li><a href="#">Наматрасники</a></li>
+									</ul>
+								</li>
+								<li class="nav__has-submenu nav__has-submenu_third"><a href="#">Ткани</a>
+									<ul class="nav__submenu nav__submenu_third">
+										<li><a href="#">Матрасы Матрасы Матрасы Матрасы</a></li>
+										<li><a href="#">Подушки</a></li>
+										<li><a href="#">Одеяла</a></li>
+										<li><a href="#">Наматрасники</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<main class="main page-home"></main>
+			<footer class="footer">
+				<section class="subscribe">
+					<div class="container">
+						<h1 class="subscribe__title">Подписаться на скидки / Акции</h1>
+						<form class="form" action="">
+							<div class="form__row">
+								<div class="form__col form__field">
+									<input type="text" name="" placeholder="Имя">
+								</div>
+								<div class="form__col form__field">
+									<input type="text" name="" placeholder="E-mail">
+								</div>
+								<div class="form__col">
+									<button class="btn">Добавить</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+				<div class="container footer__row">
+					<div class="footer__col"><a class="footer__logo" href="#"><img src="../images/pictures/general/logo.png" alt="Logo barin.kiev.ua"></a>
+						<p class="copyright">2010-2015 © Интернет-магазин мебели БАРИН</p>
+						<div class="list-soc"><a class="soc soc_fb" href="#"><i class="fa fa-facebook"></i></a><a class="soc soc_vk" href="#"><i class="fa fa-vk"></i></a></div>
+					</div>
+					<!-- footer__col-->
+					<div class="footer__col">
+						<ul class="footer__nav">
+							<li><a href="#">Карта сайта</a></li>
+							<li><a href="#">Доставка</a></li>
+							<li><a href="#">Подъем и сборка</a></li>
+							<li><a href="#">Оплата</a></li>
+						</ul>
+					</div>
+					<!-- footer__col-->
+					<div class="footer__col">
+						<ul class="footer__nav">
+							<li><a href="#">Кредит (УкрСиббанк)</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">Матрасы, текстиль</a></li>
+							<li><a href="#">Спальни, Кровати</a></li>
+							<li><a href="#">Мягкая мебель</a></li>
+							<li><a href="#">Корпусная мебель</a></li>
+							<li><a href="#">Ткани</a></li>
+						</ul>
+					</div>
+					<!-- footer__col-->
+					<div class="footer__col">
+						<div class="phones"><a class="phones__phone" href="tel:044 337-48-77"><i class="phones__icon phones__icon_city"></i>044 337-48-77</a><a class="phones__phone" href="tel:093 219-33-77"><i class="phones__icon phones__icon_live"></i>093 219-33-77</a><a class="phones__phone" href="tel:067 586-55-77"><i class="phones__icon phones__icon_kievstar"></i>067 586-55-77</a><a class="phones__phone" href="tel:095 585-66-77"><i class="phones__icon phones__icon_mts"></i>095 585-66-77</a></div>
+						<p><a href="mailto:info@barin.ua">info@barin.ua</a></p>
+						<p></p>
+						<p>Разработка сайта:<a href="http://itua.com.ua">ITUA.COM.UA</a></p>
+					</div>
+					<!-- footer__col-->
+				</div>
+				<!-- /footer__row-->
+			</footer>
+		</div>
+		<section class="modal modal_login mfp-hide mfp-with-anim js-modal-login" id="modal-login">
+			<div class="modal__close js-modal-close" href="javascript:;"></div>
+			<h1 class="modal__title">Вход в кабинет</h1>
+			<div class="modal__body">
+				<div class="login">
+					<div class="login__switcher">
+						<div class="login__sw-btn" data-target="login">Войти</div>
+						<div class="toggle-switch js-toggle-login">
+							<div class="toggle-switch__toggle"></div>
+						</div>
+						<div class="login__sw-btn" data-target="registration">Регистрация</div>
+					</div>
+					<div class="login__soc">
+						<p>Быстрый вход через соцсети:</p>
+						<div class="list-soc"><a class="soc soc_vk" href="#"><i class="fa fa-vk"></i></a><a class="soc soc_fb" href="#"><i class="fa fa-facebook"></i></a></div>
+					</div>
+					<div class="switcher-container">
+						<form class="form form_login">
+							<div class="form__row">
+								<div class="form__label">
+									<label>E-mail*</label>
+								</div>
+								<div class="form__field">
+									<input type="text" name="">
+								</div>
+							</div>
+							<!-- /form__row-->
+							<div class="form__row">
+								<div class="form__label">
+									<label>Пароль*</label>
+								</div>
+								<div class="form__field">
+									<input type="password" name="">
+								</div>
+							</div>
+							<!-- /form__row-->
+							<div class="form__row">
+								<div class="form__col">
+									<div class="checkbox">
+										<input id="rememberme" type="checkbox" name="">
+										<label for="rememberme"><span class="checkbox__pseudo"></span><span class="checkbox__label">Запромнить меня</span></label>
+									</div>
+								</div>
+								<div class="form__col">
+									<noindex><a class="login__link" href="#">Забыли свой пароль?</a></noindex>
+								</div>
+							</div>
+							<!-- /form__row-->
+							<div class="form__btn">
+								<button class="btn btn_brown" type="submit">Войти</button>
+							</div>
+						</form>
+						<!-- /login__form-->
+						<form class="form form_registration">
+							<div class="form__row">
+								<div class="form__label">
+									<label>Имя*:</label>
+								</div>
+								<div class="form__field">
+									<input type="text" name="">
+								</div>
+							</div>
+							<!-- /form__row-->
+							<div class="form__row">
+								<div class="form__label">
+									<label>Телефон*</label>
+								</div>
+								<div class="form__field">
+									<input class="js-masked-phone" type="text" name="" placeholder="+38 (___) ___-____">
+								</div>
+							</div>
+							<!-- /form__row-->
+							<div class="form__row">
+								<div class="form__label">
+									<label>Адрес e-mail*:</label>
+								</div>
+								<div class="form__field">
+									<input type="text" name="">
+								</div>
+							</div>
+							<!-- /form__row-->
+							<div class="form__row">
+								<div class="form__label">
+									<label>Пароль*:</label>
+								</div>
+								<div class="form__field">
+									<input type="password" name="">
+								</div>
+							</div>
+							<!-- /form__row-->
+							<div class="form__row">
+								<div class="form__label">
+									<label>Подтверждение пароля*:</label>
+								</div>
+								<div class="form__field">
+									<input type="password" name="">
+								</div>
+								<div class="form__desc">
+									<p>Пароль должен быть не менее 6 символов длиной.</p>
+									<p>*Поля, обязательные для заполнения.</p>
+								</div>
+							</div>
+							<!-- /form__row-->
+							<div class="form__btn">
+								<button class="btn btn_brown" type="submit">Регистрация</button>
+								<div class="form__desc">Нажимая кнопку "Зарегистрироваться", я принимаю<br><a href="#">Пользовательское соглашение</a></div>
+							</div>
+						</form>
+						<!-- /login__registration-->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- scripts for page-->
+		<script src="../js/app.js"></script>
+	</body>
+</html>

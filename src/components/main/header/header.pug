@@ -1,0 +1,76 @@
+header.header
+	.container
+		.header__lt-1
+			include ../navs/nav_main.pug
+			a.header__logo(href='/')
+				img(src='../images/pictures/general/logo.png', alt='Logo barin.kiev.ua')
+		.header__lt-2
+			.header__phones
+				.phones
+					p.phones__title Отдел продаж:
+					p.phones__phone
+						i.phones__icon.phones__icon_kievstar
+						| 067 586-55-77
+					p.phones__phone
+						i.phones__icon.phones__icon_mts
+						| 095 585-66-77
+				.phones
+					.phones__dropdown.js-phones
+						p.phones__toggle Заказать обратный звонок
+						.phones__popup
+							form.form.form_callback
+								.form__row
+									label Ваше имя*
+									.form__field
+										input(type='text', required='true')
+								.form__row
+									label Номер телефона*
+									.form__field
+										input.js-masked-phone(type='text', placeholder='+38 (___) ___-____', required='true')
+								.form__btn
+									button.btn.btn_green Обратный звонок
+					p.phones__phone
+						i.phones__icon.phones__icon_live
+						| 093 219-33-77
+					p.phones__phone
+						i.phones__icon.phones__icon_city
+						| 044 337-49-77
+				.phones
+					p.phones__title Доставка и сервис:
+					p.phones__phone
+						i.phones__icon.phones__icon_kievstar
+						| 067 342-98-48
+					p.phones__phone
+						i.phones__icon.phones__icon_city
+						| 044 337-48-77
+			.header__search.js-header__search
+				include live-search-results
+				form.form.form_search
+					input(type='text', placeholder='Введите название или артикул товара' class='js-live-search-input')
+					button.form__submit(type='submit')
+						i.fa.fa-search
+		.header__lt-3
+			.header__actions
+				a(href='#')
+					i.fa.fa-heart
+					| Избранное (12)
+				a(href='#')
+					i.fa.fa-exchange
+					| Сравнение (3)
+		.header__lt-4
+			.header__user-panel
+				.user
+					i.user__icon
+					a.js-btn-modal-login(href='#modal-login') Войти/Регистрация
+					// !!!!!for authorization  users!!!!!!
+					// <a href="#" class="user__name">???? ??????</a>
+					// <span>/</span>
+					// <a href="#">?????</a>
+				.list-soc
+					a.soc.soc_fb(href='#')
+						i.fa.fa-facebook
+					a.soc.soc_vk(href='#')
+						i.fa.fa-vk
+			include basket-small
+	// /container
+include ../navs/nav_catalog

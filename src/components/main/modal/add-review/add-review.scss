@@ -1,0 +1,30 @@
+.modal.modal_add-review {
+
+	.form__row {
+		padding: 0;
+		margin-left: 14px;
+		margin-right: 14px;
+	}
+
+	.form__row_bg {
+
+	}
+
+	.form__row_rating {
+		@extend %clfx;
+
+		.form__label {
+			float: left;
+			margin-right: 10px;
+		}
+
+		.form__field {
+			margin-top: 2px;
+			float: left;
+		}
+	}
+
+	.form__btn {
+		margin-top: 10px;
+	}
+}
