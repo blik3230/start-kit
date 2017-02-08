@@ -5,6 +5,31 @@ block title
 
 block content
 	main.main.page-home
+		.container
+			.grid
+				.grid__col-12
+					include ../../components/main/panel/example
+				.grid__col-6
+					.panel
+						.panel__header
+							.panel__title Кнопки
+
+						.panel__content
+							p
+								include ../../components/main/btn/example
+
+						.panel__footer
+
+				.grid__col-6
+					.panel.panel_blue
+						.panel__header
+							.panel__title Кнопки
+
+						.panel__content
+							include ../../components/main/btn/example
+
+						.panel__footer
+
 
 
 
