@@ -1,14 +1,1 @@
-html,
-body {
-	height: 100%;
-}
 
-.wrap-main {
-	position: relative;
-	min-height: 100%;
-	padding-bottom: map_get($g-footer, height-lg);
-}
-
-.clfx {
-	@extend %clfx;
-}

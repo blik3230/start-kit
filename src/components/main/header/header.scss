@@ -1,129 +1,39 @@
-$header-lt-width: (
-		1: 350px,
-		2: 600px,
-		3: 240px,
-		4: 230px
-);
-
 .header {
-	position: relative;
-	padding: 7px 0 20px;
+	background: map_get($g-colors, lightblue);
 
-	z-index: map-get($g-zindex, 'header');
-
-	.container {
-		@extend %clfx;
-	}
-
-	// header layouts width for large size
-	@each $lt-num, $lt-width in $header-lt-width {
-		&__lt-#{$lt-num} {
-			float: left;
-			width: $lt-width;
-		}
-	}
-
-	&__lt-1 {
-		padding-right: 10px;
-	}
-
-	&__logo {
-		display: block;
-		margin-top: 11px;
-	}
-
-	.nav_main {
-
-	}
-
-	&__lt-2 {
-		padding: 0 10px;
-	}
-
-	&__phones {
+	.header__layout {
 		display: flex;
 		justify-content: space-between;
-		margin: 8px 0 9px;
+		align-items: center;
+
+		height: map_get($g-header, height-lg);
 	}
 
-	&__search {
-		position: relative;
-		.form_search {
-
-			input[type=text] {
-				width: 100%;
-				height: 34px;
-				padding: 1px 20px;
-
-				border: 1px solid #c38d40;
-			}
-		}
-	}
-
-	&__lt-3 {
-
-	}
-	&__actions {
-		padding-top: 57px;
-		padding-left: 68px;
-
-		.fa {
-			margin-right: 6px;
-			color: #a7c800;
+		.header__l-left {
+			width: 200px;
+			margin-left: 20px;
 		}
 
-		a {
-			display: inline-block;
-			min-width: 51px;  // the magic number to move the item to a new line
-
-			color: #000;
-			text-decoration: none;
-
-			& + a {
-				margin-top: 10px;
-			}
-
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
-
-	&__lt-4 {
-		margin-top: 5px;
-	}
-
-	&__user-panel {
-		@extend %clfx;
-		line-height: 23px;
-
-		.user {
-			// the remaining styles are in the "components/user"
-			float: left;
-
-			margin-right: 5px;
-
-			&__name {
-				display: inline-block;
-				max-width: 105px;
-				overflow: hidden;
-
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				vertical-align: bottom;
-			}
+		.header__l-center {
+			flex: 1 0 auto;
 		}
 
-		.list-soc {
-			// the remaining styles are in the "components/list-soc"
-			float: right;
-
+		.header__l-right {
+			width: 200px;
 		}
+
+	.header__logo {
+		@include style-link-1(#fff);
+
+		font-size: 20px;
 	}
 
-	.basket-small {
-		// the remaining styles are in the "components/basket-small"
-		margin-top: 27px;
-		margin-left: 10px;
+	// modifiers
+	&.header_fix {
+		position: fixed;
+		left: 0;
+		top: 0;
+
+		width: 100%;
 	}
 }

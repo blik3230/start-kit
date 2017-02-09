@@ -25,11 +25,13 @@ $g-font-second: 'Gothampro Bold', Helvetica, Arial, sans-serif;
 $g-colors: (
 	text: #000,
 	link: #666,
-	red: #f00,
-	blue: #00f,
-	green: #0f0,
-	yellow: #fffc28
-);
+	red: #d9534f,
+	blue: #337ab7,
+	lightblue: #5bc0de,
+	green: #5cb85c,
+	yellow: #f0ad4e,
+	gray: #888
+) !default;
 
 
 //
@@ -46,7 +48,7 @@ $g-colors: (
 
 	// values of the header
 	$g-header: (
-		height-lg: 80px,
+		height-lg: 60px,
 		height-md: 80px,
 		height-sm: 60px,
 		height-xs: 60px,
@@ -55,35 +57,12 @@ $g-colors: (
 
 	// values of the footer
 	$g-footer: (
-		height-lg: 513px,
+		height-lg: 60px,
 		height-md: 56px,
 		height-sm: 129px,
 		height-xs: 207px,
 		zi: #{map_get($g-zindex, footer)}
 	);
-
-	// values of the content area
-	$g-main: (
-		height-lg: calc( 100vh - #{map_get($g-header, height-lg) + map_get($g-footer, height-lg)} ),
-		height-md: calc( 100vh - #{map_get($g-footer, height-md)} ),
-		height-sm: calc( 100vh - #{map_get($g-footer, height-sm)} ),
-		height-xs: calc( 100vh - #{map_get($g-footer, height-xs)} ),
-		zi: #{map_get($g-zindex, main)}
-	);
-
-	// values of the container
-	$g-container: (
-		width-lg: 1200px,
-		width-md: 960px,
-		width-sm: 720px,
-		width-xs: 100%,
-	);
-
-
-//
-//----- shadows -----
-//
-$g-text-shadow: 0 -2px 1px rgba(0, 0, 0, 0.25);
 
 
 // screen resolutions
@@ -93,9 +72,29 @@ $g-text-shadow: 0 -2px 1px rgba(0, 0, 0, 0.25);
 // md - 1025 - 1280
 // sm - 769 - 1024
 // xs - 320 - 768
-//$g-container: (
-//	width-lg: 1200px,
-//	width-md: 960px,
-//	width-sm: 720,
-//	width-xs: 100%,
-//);
+$media-max-lg: 1360px;
+$media-min-lg: 1281px;
+
+$media-max-md: 1280px;
+$media-min-md: 1025px;
+
+$media-max-sm: 1024px;
+$media-min-sm: 769px;
+
+$media-max-xs: 768px;
+$media-min-xs: 320px;
+
+// values of the container
+$g-container: (
+	width: 1440px,
+	width-lg: 1200px,
+	width-md: 960px,
+	width-sm: 720px,
+	width-xs: 100%,
+);
+
+
+//
+//----- shadows -----
+//
+$g-text-shadow: 0 -2px 1px rgba(0, 0, 0, 0.25);

@@ -1,12 +1,32 @@
-$width-lg: 1440px;
-$padding-lg: 20px;
-
 .container {
-	width: $width-lg;
-	padding: 0 $padding-lg;
+	$width: map_get($g-container, width);
+	$width-lg: map_get($g-container, width-lg);
+	$width-md: map_get($g-container, width-md);
+	$width-sm: map_get($g-container, width-sm);
+	$width-xs: map_get($g-container, width-xs);
+	$padding: 20px;
+
+	width: $width;
+	padding: 0 $padding;
 	margin: 0 auto;
 
 	&.container_fullsize {
 		padding: 0;
+	}
+
+	@include media-lg {
+		width: $width-lg;
+	}
+
+	@include media-md {
+		width: $width-md;
+	}
+
+	@include media-sm {
+		width: $width-sm;
+	}
+
+	@include media-xs {
+		width: $width-xs;
 	}
 }

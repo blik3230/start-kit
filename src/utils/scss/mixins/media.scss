@@ -1,16 +1,3 @@
-$media-max-lg: 1360px;
-$media-min-lg: 1281px;
-
-$media-max-md: 1280px;
-$media-min-md: 1025px;
-
-$media-max-sm: 1024px;
-$media-min-sm: 769px;
-
-$media-max-xs: 768px;
-$media-min-xs: 320px;
-
-
 @mixin mq($args...) {
 	$media-type: 'only screen';
 	$media-type-key: 'media-type';

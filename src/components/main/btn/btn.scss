@@ -4,24 +4,28 @@
 	$btn-padding-lg: 15px 30px;
 	$btn-padding-sm: 5px 10px;
 
-	$btn-background: #fff;
+	$btn-background-default: lighten(map_get($g-colors, gray), 50);
 	$btn-background-green: map_get($g-colors, green);
 	$btn-background-blue: map_get($g-colors, blue);
+	$btn-background-lightblue: map_get($g-colors, lightblue);
 	$btn-background-red: map_get($g-colors, red);
 	$btn-background-yellow: map_get($g-colors, yellow);
 
 	$btn-border-radius: 4px; // if value == null, this style do not include in this code
 	$btn-border-width: 1px;  // if value == null, this style do not include in this code
-	$btn-border-color: #ccc;
+
+	$btn-border-color-default: darken($btn-background-default, 10);
 	$btn-border-color-green: darken($btn-background-green, 10);
 	$btn-border-color-blue: darken($btn-background-blue, 10);
+	$btn-border-color-lightblue: darken($btn-background-lightblue, 10);
 	$btn-border-color-red: darken($btn-background-red, 10);
 	$btn-border-color-yellow: darken($btn-background-yellow, 10);
 
-	$btn-text-color: #888;
-	$btn-font: bold 14px $g-font-main;
-	$btn-font-lg: bold 16px $g-font-main;
-	$btn-font-sm: bold 12px $g-font-main;
+	$btn-text-color: #fff;
+	$btn-text-color-default: #888;
+	$btn-font: bold 16px $g-font-main;
+	$btn-font-lg: bold 18px $g-font-main;
+	$btn-font-sm: bold 14px $g-font-main;
 	$btn-text-uppercase: false;
 	///////////////////////////////////////
 
@@ -30,25 +34,29 @@
 	padding: $btn-padding;
 
 	@if ($btn-border-width) {
-		border: $btn-border-width solid $btn-border-color;
+		border: $btn-border-width solid $btn-border-color-default;
 	}
 
 	@if ($btn-border-radius) {
 		border-radius: $btn-border-radius;
 	}
 
+	background: $btn-background-default;
 
-	background: $btn-background;
-
-	color: $btn-text-color;
+	color: $btn-text-color-default;
 	font: $btn-font;
+	text-shadow: 0 0 1px rgba(#000, 0.1);
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 
 	@if ($btn-text-uppercase) {
 		text-transform: uppercase;
 	}
 
 	&:hover {
-		background: darken($btn-background, 20);
+		background: darken($btn-background-default, 10);
 	}
 
 	//modifiers
@@ -56,8 +64,10 @@
 		background-color: $btn-background-green;
 		border-color: $btn-border-color-green;
 
+		color: $btn-text-color;
+
 		&:hover {
-			background: darken($btn-background-green, 20);
+			background: darken($btn-background-green, 10);
 		}
 	}
 
@@ -65,8 +75,10 @@
 		background-color: $btn-background-red;
 		border-color: $btn-border-color-red;
 
+		color: $btn-text-color;
+
 		&:hover {
-			background: darken($btn-background-red, 20);
+			background: darken($btn-background-red, 10);
 		}
 	}
 
@@ -74,8 +86,21 @@
 		background-color: $btn-background-blue;
 		border-color: $btn-border-color-blue;
 
+		color: $btn-text-color;
+
 		&:hover {
-			background: darken($btn-background-blue, 20);
+			background: darken($btn-background-blue, 10);
+		}
+	}
+
+	&.btn_lightblue {
+		background-color: $btn-background-lightblue;
+		border-color: $btn-border-color-lightblue;
+
+		color: $btn-text-color;
+
+		&:hover {
+			background: darken($btn-background-lightblue, 10);
 		}
 	}
 
@@ -83,8 +108,10 @@
 		background-color: $btn-background-yellow;
 		border-color: $btn-border-color-yellow;
 
+		color: $btn-text-color;
+
 		&:hover {
-			background: darken($btn-background-yellow, 20);
+			background: darken($btn-background-yellow, 10);
 		}
 	}
 
@@ -103,16 +130,16 @@
 	}
 
 	&.btn_fix {
-		width: 150px;
-		padding-left: -2px;
-		padding-right: -2px;
+		width: 180px;
+		padding-left: 2px;
+		padding-right: 2px;
 
 		&.btn_lg {
 			width: 200px;
 		}
 
 		&.btn_sm {
-			width: 100px;
+			width: 140px;
 		}
 	}
 
