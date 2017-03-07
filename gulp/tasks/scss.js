@@ -39,7 +39,7 @@ module.exports = function (gulp, serv, defaultTask) {
 				cache: true,
 				outputStyle: 'expanded',
 				precision: 3,
-				includePaths: ['.']
+				includePaths: ['node_modules/susy/sass']
 			}).on('error', sass.logError))
 			.pipe(autoprefixer())
 			.pipe(sourcemaps.write())

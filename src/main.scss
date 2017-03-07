@@ -4,6 +4,9 @@
 // utils (mixins, function, templates, helpers - individual library)
 @import "utils/scss/index";
 
+// susy grid
+@import "susy";
+
 // vendors
 @import "vendors/_tools";
 
