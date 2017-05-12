@@ -1,0 +1,8 @@
+//-
+	Created by ITUA on 11.05.2017.
+
+<% _.forEach( icons, function( icon ){ %>
+mixin icon_<%= icon.className.replace('.', '') %> ()
+	svg(class='icon icon_<%= icon.className.replace('.', '') %>')
+		use(xlink:href='#<%= icon.className.replace('.', '') %>')
+<% }); %>

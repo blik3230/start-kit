@@ -1,0 +1,15 @@
+<% _.forEach( icons, function( icon ){ %><%= '.icon.icon_' + icon.className.replace('.', '') %> {
+	width: <%= icon.width %>;
+	height: <%= icon.height %>;
+}
+<%= icon.style %>
+<% }); %>
+
+
+
+
+
+
+
+
+

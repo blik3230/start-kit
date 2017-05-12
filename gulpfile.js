@@ -10,7 +10,8 @@ const gulp = require('gulp'),
 	initFont = require('./gulp/tasks/font'),
 	initImgmin = require('./gulp/tasks/imgmin'),
 	initSpritePng = require('./gulp/tasks/sprite-png'),
-	initSpriteSvg = require('./gulp/tasks/sprite-svg');
+	initSpriteSvg = require('./gulp/tasks/sprite-svg'),
+	initSpriteSvgSymbol = require('./gulp/tasks/sprite-svg-symbol');
 
 global.isProd = process && !! process.env.NODE_ENV;
 console.log('prod ' + global.isProd);
@@ -18,6 +19,14 @@ console.log('prod ' + global.isProd);
 let defaultTask = [];
 
 const serv = initServer(gulp, defaultTask);
+
+initImgmin(gulp, serv, defaultTask);
+
+initSpritePng(gulp, serv, defaultTask);
+
+initSpriteSvg(gulp, serv, defaultTask);
+
+initSpriteSvgSymbol(gulp, serv, defaultTask);
 
 initPug(gulp, serv, defaultTask);
 
@@ -28,12 +37,6 @@ initHelpersScss(gulp, serv, defaultTask);
 initScss(gulp, serv, defaultTask);
 
 initFont(gulp, serv, defaultTask);
-
-initImgmin(gulp, serv, defaultTask);
-
-initSpritePng(gulp, serv, defaultTask);
-
-initSpriteSvg(gulp, serv, defaultTask);
 
 initWebpack(gulp, serv, defaultTask);
 
